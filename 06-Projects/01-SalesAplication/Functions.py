@@ -36,16 +36,20 @@ def valDate(msg):
         try:
             date = input(msg)  
             if date=='0':
+                clean()
                 print('Registration cancelled!')
                 break
             day, month, year = map(int, date.split('/'))
             if (day < 1):
+                clean()
                 print(f'The day {day} is not valid!')
                 dateok=False
             elif year!=2022:
+                clean()
                 print(f'Year entered is not valid, only sales from the year 2022 are allowed!')
                 dateok=False
             elif (month>12) or (month<1):
+                clean()
                 print(f'The month {month} is not valid!')
                 dateok=False
             # Months with 31 days
@@ -53,6 +57,7 @@ def valDate(msg):
                 if (day <= 31):
                     dateok = True
                 else:
+                    clean()
                     print(f'Invalid date: for the month {month}, the day {day}, is not valid!')
                     dateok = False
             # Months with 30 days
@@ -60,6 +65,7 @@ def valDate(msg):
                 if (day <= 30):
                     dateok = True
                 else:
+                    clean()
                     print(f'Invalid date: for the month {month}, the day {day}, is not valid!')
                     dateok = False
             # if the month is february, we need to know if the year is a leap year
@@ -71,11 +77,14 @@ def valDate(msg):
                     elif (day <= 28):
                         dateok = True
                     else:
+                        clean()
                         print('Invalid date!')
                         dateok = False
             else:
+                clean()
                 print('Invalid date!')
         except:
+            clean()
             print('Date entered is not valid!\nEnter the date of sale in the format: dd/mm/yyyy')
             dateok= False
     return date
@@ -89,9 +98,11 @@ def customerNumber(msg):
         try:
             num=int(input(msg))      
             if num<0:
+                clean()
                 print(f'Customer number {num} is not valid!')  
                 numok=False    
         except:
+            clean()
             print('Error: Invalid customer number!')
             numok=False
     return num
@@ -105,12 +116,13 @@ def valPositiveInteger(msg):
         try:
             num=int(input(msg)) 
             if num<0:
-                print(f'Numero inserido: {num}, não é válido!')  
+                clean()
+                print(f'Entered number: {num}, not valid!')  
                 numok=False         
         except:
-            print("Erro: volta a inserir o número!")
+            clean()
+            print("Error: re-enter the number!")
             numok=False
-            
     return num
 # -----------------------------------------------------------------------------
 SellerCodeList=range(100,1000,100) # accepted seller codes
@@ -120,8 +132,10 @@ def sellerNumber(msg):
         try:
             sellerCode= int(input(msg))
             if (sellerCode not in SellerCodeList) and (sellerCode!=0):
+                clean()
                 print(f'Seller {sellerCode} is not valid!') 
         except:
+            clean()
             print('Wrong seller code, enter a 3-digit number! (eg: 100)')
     return sellerCode
 # -----------------------------------------------------------------------------
@@ -138,15 +152,18 @@ def valProduct(msg):
                     countNumber+=1
                 elif i.isalpha():
                     countLetters+=1 
-            if productok=='0':
+            if productCode=='0':
+                clean()
                 print('Registration cancelled!')
                 break  
             elif (countLetters==3) and (countNumber==3):
                 productok=True
             else:
+                clean()
                 print(f'Product code: {productCode} is not valid, the code supports 3 numbers and 3 letters!')
                 productok=False
         except:
+            clean()
             print('Product code is not valid!')
     return productCode
 # -----------------------------------------------------------------------------
@@ -161,9 +178,11 @@ def valQuantity(msg):
                 print('Registration cancelled!')
                 break
             elif qut < 1:
+                clean()
                 print(f'Quantity: {qut} is not valid !')
                 qutok= False
         except:
+            clean()
             print('Inserted value is not valid! Enter a number!')
             qutok= False
     return qut
@@ -179,25 +198,26 @@ def valSaleValue(msg):
                 print('Registration cancelled!')
                 break
             elif saleValue<1:
+                clean()
                 print(f'Inserted sales value: {saleValue}, not valid!')
                 vvok= False
         except:
+            clean()
             print('Value entered is not valid, enter a number!')
             vvok= False
     return saleValue
 # -----------------------------------------------------------------------------
 # Zone (string: North(“N”) / Center(“C”) / South(“S”) / Islands(“I”))
-zoneList= ['N','C','S','I']
 def customerZone(msg):
+    zoneList= ['N','C','S','I']
     zoneok = False
     while not zoneok:   
         zone= input(msg)
         zone=zone.upper()   
         if zone  in zoneList:
             zoneok= True
-        elif zone =='0':
-            zoneok=True
         else:
+            clean()
             print(f'Intruded zone {zone} is not valid!')
             zoneok= False
     return zone

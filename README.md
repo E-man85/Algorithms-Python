@@ -12,14 +12,14 @@ Sales (Part 1) and respective data outputs (Part 2).
 
 The Sales structure is defined by:
 
-- the Sale ID (integer: incremental 1 / 2 / 3 / 4 / …)
+- The Sale ID (integer: incremental 1 / 2 / 3 / 4 / …)
 - Seller Code (integer: 100 / 200 / 300 / …)
 - Customer Designation (string; “Customer1”, “Customer2”, …)
 - Zone (string: North(“N”) / Center(“C”) / South(“S”) / Islands(“I”))
 - Date (string with “mm/dd/yyyy” format)
 - Product Code (string: “ABC100”, “XYAS12”, “XPTO1”, …)
 - Quantity (integer: 1 / 2 / 5 / 7 / …)
-- the Sale Value (float €)
+- The Sale Value (float €)
   
 Example of sales records in a list:
 

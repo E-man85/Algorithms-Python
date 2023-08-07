@@ -37,5 +37,6 @@ SalesNumber;SallerCode;NumberCustomer;Zone;Date;ProductCode;Quantity;Price;
 38;300;cliente:9;N;02/10/2022;AMS717;8;87.68;
 39;200;cliente:12;N;05/04/2022;KLC712;8;1143.04;
 40;400;cliente:3;C;18/06/2022;TVG405;3;135.91;
-41;200;Cliente:6;S;25/04/2022;GFR365;5;150.0;
+41;200;Customer:6;S;25/04/2022;DFR214;5;150.0;
 42;100;Customer:5;S;25/03/2022;ERF325;5;25.0;
+43;300;Customer:9;N;5/7/2022;547UYT;6;250.0;
