@@ -370,7 +370,7 @@ while True:
                             print(f'Do you really want to delete the {remove} sale?\nEnter (1) to confirm (0) to cancel!') 
 #----------------------------------------------------------------------------------------------------- 
                 # Rewrite the entire list lv in the csv doc with the deletions made
-                file=open("Registo_vendas.csv", "w") # open file for writing
+                file = open("07-Data/SalesRecords.csv", "w")# open file for writing
                 file.write(f"SalesNumber;SallerCode;NumberCustomer;Zone;Date;ProductCode;Quantity;Price;\n")  # write the field headers
                 for i in range(len(lv)): # percorre a lista
                     file.write(f"{lv[i][0]};{lv[i][1]};{lv[i][2]};{lv[i][3]};{lv[i][4]};{lv[i][5]};{lv[i][6]};{lv[i][7]};\n") 

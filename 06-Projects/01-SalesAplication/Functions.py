@@ -221,3 +221,10 @@ def customerZone(msg):
             print(f'Intruded zone {zone} is not valid!')
             zoneok= False
     return zone
+# -----------------------------------------------------------------------------
+# Interface menupart II
+def menu2():
+    print(20*'-'+'ANALYSIS SYSTEM'+20*'-'+'\n'+'\n')
+    print('1-Sales Analysis(€)\n2-Quantity Analysis(uni)\n'
+    '3-Customer Aggregates with average\n4-Sales Aggregates with average\n0-Exit the application !')
+    return (int(input('Choose an option!')))
