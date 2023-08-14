@@ -8,6 +8,9 @@ In this repositories you can find my journey in introducing programming and algo
 
 The application consists of processing information from a data structure of
 Sales (Part 1) and respective data outputs (Part 2).
+
+The challenge is to build the application using only "for" and "While" cycles, with "list" data structures.
+
 > - [PartI](https://github.com/E-man85/Algorithms-Python/blob/main/06-Projects/01-SalesAplication/PartI.py)
 
 The Sales structure is defined by:
@@ -38,7 +41,8 @@ sale generates an incremental sales record. The same customer can
 exist in different zones.
 
 - Expected functions: Insert / Consult / List / Change / Delete
-> - PartII
+  
+> - [PartII](https://github.com/E-man85/Algorithms-Python/blob/main/06-Projects/01-SalesAplication/PartII.py)
 
 Expected outputs:
 - Total Sales by Salesperson
